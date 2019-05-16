@@ -13,19 +13,15 @@ def Main_num(num):
     main_num = num
 
 def enter():
-    global city
-    pass
+   run()
 
 def exit():
-    pass
+   pass
 def pause():
     pass
-def process_Euro():
-    game_framework.run(Big_map_state)
-
 def run():
     global window,main_num
-    window = Tk()
+    window = Toplevel()
     if main_num==1:
         window.title('유럽')
         main_photo = 'photo\\Europe.png'
@@ -93,7 +89,6 @@ def run():
         nation1.place(x=340, y=240)
         nation2 = Button(window, text="미국", width=5)
         nation2.place(x=380, y=315)
-
     elif main_num==6:
         nation1 = Button(window, text="멕시코", width=6)
         nation1.place(x=230, y=25)
@@ -117,9 +112,8 @@ def run():
         nation5 = Button(window, text="아프카니스탄", width=10)
         nation5.place(x=520, y=160)
     window.geometry('800x500')  # width x height + 가로격자+세로격자
-  #button1 = Button(window, text="뒤로가기 아직안댐", width=50, command = process_Euro)
+    #button1 = Button(window, text="뒤로가기 아직안댐", width=50, command = process_Euro)
     #button1.place(x=00, y=0)
-
 
     window.mainloop()
 
