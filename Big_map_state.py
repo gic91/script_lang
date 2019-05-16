@@ -22,25 +22,25 @@ def process_Euro():
     global main_num
     #대륙별 다른 사진 출력
     Middle_map_state.Main_num(1)
-    game_framework.push_state(Middle_map_state)
+    game_framework.change_state(Middle_map_state)
 def process_Asia():
     Middle_map_state.Main_num(2)
-    game_framework.push_state(Middle_map_state)
+    game_framework.change_state(Middle_map_state)
 def process_Ocea():
     Middle_map_state.Main_num(3)
-    game_framework.push_state(Middle_map_state)
+    game_framework.change_state(Middle_map_state)
 def process_Afri():
     Middle_map_state.Main_num(4)
-    game_framework.push_state(Middle_map_state)
+    game_framework.change_state(Middle_map_state)
 def process_N_Amer():
     Middle_map_state.Main_num(5)
-    game_framework.push_state(Middle_map_state)
+    game_framework.change_state(Middle_map_state)
 def process_S_Amer():
     Middle_map_state.Main_num(6)
-    game_framework.push_state(Middle_map_state)
+    game_framework.change_state(Middle_map_state)
 def process_M_Asia():
     Middle_map_state.Main_num(7)
-    game_framework.push_state(Middle_map_state)
+    game_framework.change_state(Middle_map_state)
 def run():
     global window
     window = Tk()

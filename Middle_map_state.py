@@ -19,9 +19,12 @@ def exit():
    pass
 def pause():
     pass
+def Back():
+    window.destroy()
+    game_framework.run(Big_map_state)
 def run():
     global window,main_num
-    window = Toplevel()
+    window = Tk()
     if main_num==1:
         window.title('유럽')
         main_photo = 'photo\\Europe.png'
@@ -112,8 +115,8 @@ def run():
         nation5 = Button(window, text="아프카니스탄", width=10)
         nation5.place(x=520, y=160)
     window.geometry('800x500')  # width x height + 가로격자+세로격자
-    #button1 = Button(window, text="뒤로가기 아직안댐", width=50, command = process_Euro)
-    #button1.place(x=00, y=0)
+    button1 = Button(window, text="뒤로가기 아직안댐", width=50, command = Back)
+    button1.place(x=00, y=0)
 
     window.mainloop()
 
