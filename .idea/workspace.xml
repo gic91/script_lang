@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fad07bc9-e284-4615-8aa2-34e36d65b00a" name="Default Changelist" comment="" />
+    <list default="true" id="fad07bc9-e284-4615-8aa2-34e36d65b00a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Big_map_state.py" beforeDir="false" afterPath="$PROJECT_DIR$/Big_map_state.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middle_map_state.py" beforeDir="false" afterPath="$PROJECT_DIR$/Middle_map_state.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_framework.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_framework.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,17 +18,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/start_state.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-171">
-              <caret column="21" lean-forward="true" selection-start-column="21" selection-end-column="21" />
+            <state relative-caret-position="209">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Big_map_state.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="24" column="3" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
+            <state relative-caret-position="342">
+              <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -34,8 +42,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="114">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -46,27 +54,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Middle_map_state.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+            <state relative-caret-position="66">
+              <caret line="114" column="71" selection-start-line="114" selection-start-column="71" selection-end-line="114" selection-end-column="71" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
-                <element signature="e#1221#1663#0" />
-                <element signature="e#1694#2133#0" />
-                <element signature="e#2164#2341#0" />
-                <element signature="e#2372#2820#0" />
-                <element signature="e#2851#3021#0" />
-                <element signature="e#3053#3494#0" />
-                <element signature="e#3525#3973#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/game_framework.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="30" lean-forward="true" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+            <state relative-caret-position="437">
+              <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -74,8 +75,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tk_ex.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="683">
-              <caret line="122" column="8" selection-start-line="122" selection-start-column="4" selection-end-line="122" selection-end-column="8" />
+            <state relative-caret-position="38">
+              <caret line="2" column="50" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -120,13 +121,13 @@
         <option value="$PROJECT_DIR$/Mygame.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/start_state.py" />
-        <option value="$PROJECT_DIR$/game_framework.py" />
-        <option value="$PROJECT_DIR$/Middle_map_state.py" />
         <option value="$PROJECT_DIR$/Big_map_state.py" />
+        <option value="$PROJECT_DIR$/Middle_map_state.py" />
+        <option value="$PROJECT_DIR$/game_framework.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="944" />
     <option name="y" value="136" />
     <option name="width" value="974" />
@@ -145,11 +146,6 @@
               <item name="script_lang" type="b2602c69:ProjectViewProjectNode" />
               <item name="script_lang" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="script_lang" type="b2602c69:ProjectViewProjectNode" />
-              <item name="script_lang" type="462c0819:PsiDirectoryNode" />
-              <item name="venv" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -158,8 +154,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../새 폴더3/날씨프로젝트" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Background" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -311,14 +307,14 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49736565" visible="true" weight="0.3286334" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49683878" visible="true" weight="0.3286334" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50263435" side_tool="true" visible="true" weight="0.3286334" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50316125" side_tool="true" visible="true" weight="0.3286334" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -335,9 +331,7 @@
     <entry file="file://$PROJECT_DIR$/python.py" />
     <entry file="file://$PROJECT_DIR$/Main.png" />
     <entry file="file://$PROJECT_DIR$/Main_photo.jpg" />
-    <entry file="file://$PROJECT_DIR$/../../새 폴더3/날씨프로젝트/mise.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../새 폴더3/날씨프로젝트/mise.xml" />
     <entry file="file://$PROJECT_DIR$/mise.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -348,92 +342,35 @@
     <entry file="file://$PROJECT_DIR$/menu_state.py" />
     <entry file="file://$PROJECT_DIR$/map_state.py" />
     <entry file="file://$PROJECT_DIR$/Mygame.py" />
-    <entry file="file://C:/Temp/BNZ.5cdcfdc61c8c8f36/game_state.py">
+    <entry file="file://C:/Temp/BNZ.5cdcfdc61c8c8f36/game_state.py" />
+    <entry file="file://C:/Temp/BNZ.5cdcfd431c8a8f3f/game_framework.py" />
+    <entry file="file://C:/Temp/BNZ.5cdcfe7d1c8f5952/stage1.py" />
+    <entry file="file://C:/Temp/BNZ.5cdcfe771c8f40f8/stage1_world.py" />
+    <entry file="file://C:/Temp/BNZ.5cdcfe5a1c8ed165/stage1_state.py" />
+    <entry file="file://C:/Temp/BNZ.5cdcfe471c8e85c6/Mario.py" />
+    <entry file="file://C:/Temp/BNZ.5cdcfe311c8e3072/Main_Stage.py" />
+    <entry file="file://C:/Temp/BNZ.5cdcfe221c8df6f3/game_state.py" />
+    <entry file="file://C:/Temp/BNZ.5cdcfebd1c905594/game_framework.py" />
+    <entry file="file://C:/Temp/BNZ.5cdcfe151c8dc42b/menu_state.py" />
+    <entry file="file://C:/Temp/BNZ.5cdcff4b1c927d47/stage1_state.py" />
+    <entry file="file://C:/Temp/BNZ.5cdcfecf1c9098e7/end_state.py" />
+    <entry file="file://C:/Temp/BNZ.5cdd0599120e21/game_framework.py" />
+    <entry file="file://C:/Temp/BNZ.5cdd08431c770c/game_framework.py" />
+    <entry file="file://$PROJECT_DIR$/../../새 폴더3/날씨프로젝트/Mygame.py" />
+    <entry file="file://$PROJECT_DIR$/start_state.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-817">
-          <caret line="2" column="9" lean-forward="true" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Temp/BNZ.5cdcfd431c8a8f3f/game_framework.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="912">
-          <caret line="48" column="16" lean-forward="true" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Temp/BNZ.5cdcfe7d1c8f5952/stage1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="209">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
           <folding>
-            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Temp/BNZ.5cdcfe771c8f40f8/stage1_world.py">
+    <entry file="file://$PROJECT_DIR$/tk_ex.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-153" />
-      </provider>
-    </entry>
-    <entry file="file://C:/Temp/BNZ.5cdcfe5a1c8ed165/stage1_state.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-134">
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Temp/BNZ.5cdcfe471c8e85c6/Mario.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Temp/BNZ.5cdcfe311c8e3072/Main_Stage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Temp/BNZ.5cdcfe221c8df6f3/game_state.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Temp/BNZ.5cdcfebd1c905594/game_framework.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1559">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Temp/BNZ.5cdcfe151c8dc42b/menu_state.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-399">
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Temp/BNZ.5cdcff4b1c927d47/stage1_state.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-114">
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="38">
+          <caret line="2" column="50" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -444,84 +381,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Temp/BNZ.5cdcfecf1c9098e7/end_state.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="22" selection-start-line="22" selection-end-line="25" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Temp/BNZ.5cdd0599120e21/game_framework.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-704">
-          <caret line="64" column="15" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Temp/BNZ.5cdd08431c770c/game_framework.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tk_ex.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="683">
-          <caret line="122" column="8" selection-start-line="122" selection-start-column="4" selection-end-line="122" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../새 폴더3/날씨프로젝트/Mygame.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-            <element signature="e#6065#6547#0" />
-            <element signature="e#6581#6843#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/start_state.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-171">
-          <caret column="21" lean-forward="true" selection-start-column="21" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game_framework.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="30" lean-forward="true" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Middle_map_state.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-            <element signature="e#1221#1663#0" />
-            <element signature="e#1694#2133#0" />
-            <element signature="e#2164#2341#0" />
-            <element signature="e#2372#2820#0" />
-            <element signature="e#2851#3021#0" />
-            <element signature="e#3053#3494#0" />
-            <element signature="e#3525#3973#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="114">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
@@ -530,11 +393,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Big_map_state.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="24" column="3" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
+        <state relative-caret-position="342">
+          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Middle_map_state.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="114" column="71" selection-start-line="114" selection-start-column="71" selection-end-line="114" selection-end-column="71" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game_framework.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
         </state>
       </provider>
     </entry>

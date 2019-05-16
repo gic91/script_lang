@@ -16,13 +16,12 @@ def resume():
     pass
 def exit():
     window.destroy()
-    pass
 
 def process_Euro():
     global main_num
     #대륙별 다른 사진 출력
     Middle_map_state.Main_num(1)
-    game_framework.push_state(Middle_map_state)
+    game_framework.change_state(Middle_map_state)
 def process_Asia():
     Middle_map_state.Main_num(2)
     game_framework.push_state(Middle_map_state)

@@ -16,7 +16,7 @@ def enter():
    run()
 
 def exit():
-   pass
+   game_framework.change_state(Big_map_state)
 def pause():
     pass
 def run():
@@ -112,8 +112,8 @@ def run():
         nation5 = Button(window, text="아프카니스탄", width=10)
         nation5.place(x=520, y=160)
     window.geometry('800x500')  # width x height + 가로격자+세로격자
-    #button1 = Button(window, text="뒤로가기 아직안댐", width=50, command = process_Euro)
-    #button1.place(x=00, y=0)
+    button1 = Button(window, text="뒤로가기 아직안댐", width=50, command = exit)
+    button1.place(x=00, y=0)
 
     window.mainloop()
 
