@@ -1,7 +1,7 @@
 import game_framework
 from tkinter import *
 from tkinter import font
-import Mygame
+import Middle_map_state
 name = "MenuState"
 
 def enter():
@@ -17,26 +17,26 @@ def exit():
 def process_Euro():
     global main_num
     #대륙별 다른 사진 출력
-    Mygame.Main_num(1)
-    game_framework.change_state(Mygame)
+    Middle_map_state.Main_num(1)
+    game_framework.change_state(Middle_map_state)
 def process_Asia():
-    Mygame.Main_num(2)
-    game_framework.change_state(Mygame)
+    Middle_map_state.Main_num(2)
+    game_framework.change_state(Middle_map_state)
 def process_Ocea():
-    Mygame.Main_num(3)
-    game_framework.change_state(Mygame)
+    Middle_map_state.Main_num(3)
+    game_framework.change_state(Middle_map_state)
 def process_Afri():
-    Mygame.Main_num(4)
-    game_framework.change_state(Mygame)
+    Middle_map_state.Main_num(4)
+    game_framework.change_state(Middle_map_state)
 def process_N_Amer():
-    Mygame.Main_num(5)
-    game_framework.change_state(Mygame)
+    Middle_map_state.Main_num(5)
+    game_framework.change_state(Middle_map_state)
 def process_S_Amer():
-    Mygame.Main_num(6)
-    game_framework.change_state(Mygame)
+    Middle_map_state.Main_num(6)
+    game_framework.change_state(Middle_map_state)
 def process_M_Asia():
-    Mygame.Main_num(7)
-    game_framework.change_state(Mygame)
+    Middle_map_state.Main_num(7)
+    game_framework.change_state(Middle_map_state)
 def run():
     global window
     window = Tk()

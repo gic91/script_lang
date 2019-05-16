@@ -1,7 +1,7 @@
 import game_framework
 from tkinter import *
 from tkinter import font
-import map_state
+import Big_map_state
 name = "StartState"
 
 def enter():
@@ -15,7 +15,7 @@ def exit():
     pass
 
 def process_next():
-    game_framework.change_state(map_state)
+    game_framework.change_state(Big_map_state)
 
 def run():
     global window
