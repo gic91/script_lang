@@ -1,6 +1,7 @@
 import game_framework
 from tkinter import *
 from tkinter import font
+import start_state
 import Middle_map_state
 name = "MenuState"
 
@@ -9,7 +10,8 @@ def enter():
 
 def update():
     pass
-
+def pause():
+    pass
 def exit():
     window.destroy()
     pass
@@ -18,7 +20,7 @@ def process_Euro():
     global main_num
     #대륙별 다른 사진 출력
     Middle_map_state.Main_num(1)
-    game_framework.change_state(Middle_map_state)
+    game_framework.push_state(Middle_map_state)
 def process_Asia():
     Middle_map_state.Main_num(2)
     game_framework.change_state(Middle_map_state)
