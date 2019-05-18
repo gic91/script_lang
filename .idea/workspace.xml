@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fad07bc9-e284-4615-8aa2-34e36d65b00a" name="Default Changelist" comment="" />
+    <list default="true" id="fad07bc9-e284-4615-8aa2-34e36d65b00a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Big_map_state.py" beforeDir="false" afterPath="$PROJECT_DIR$/Big_map_state.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middle_map_state.py" beforeDir="false" afterPath="$PROJECT_DIR$/Middle_map_state.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_framework.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_framework.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,13 +18,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/start_state.py">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
             <state relative-caret-position="209">
               <caret line="11" selection-start-line="11" selection-end-line="11" />
-=======
-            <state relative-caret-position="19">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
->>>>>>> Jik
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -27,19 +27,11 @@
           </provider>
         </entry>
       </file>
-<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Big_map_state.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-=======
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/start_state.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="45" column="42" selection-start-line="45" selection-start-column="38" selection-end-line="45" selection-end-column="42" />
->>>>>>> Jik
+            <state relative-caret-position="342">
+              <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -50,13 +42,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
             <state relative-caret-position="114">
               <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-=======
-            <state relative-caret-position="-305">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
->>>>>>> Jik
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -67,12 +54,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Middle_map_state.py">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="323">
-              <caret line="20" column="8" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-=======
-            <state relative-caret-position="361">
-              <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+            <state relative-caret-position="66">
+              <caret line="114" column="71" selection-start-line="114" selection-start-column="71" selection-end-line="114" selection-end-column="71" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -80,29 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Small_map_state.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
->>>>>>> Jik
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/game_framework.py">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="779">
-              <caret line="41" column="7" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
-=======
-            <state relative-caret-position="-456">
-              <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
->>>>>>> Jik
+            <state relative-caret-position="437">
+              <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -110,13 +75,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tk_ex.py">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
             <state relative-caret-position="38">
               <caret line="2" column="50" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="50" />
-=======
-            <state relative-caret-position="-135">
-              <caret line="79" column="42" selection-start-line="79" selection-start-column="25" selection-end-line="79" selection-end-column="42" />
->>>>>>> Jik
             </state>
           </provider>
         </entry>
@@ -145,8 +105,6 @@
       <find>root</find>
       <find>url</find>
       <find>pyimage3</find>
-      <find>parent</find>
-      <find>winfo_screenwidth</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -162,15 +120,14 @@
         <option value="$PROJECT_DIR$/map_state.py" />
         <option value="$PROJECT_DIR$/Mygame.py" />
         <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/game_framework.py" />
-        <option value="$PROJECT_DIR$/Small_map_state.py" />
-        <option value="$PROJECT_DIR$/Middle_map_state.py" />
-        <option value="$PROJECT_DIR$/Big_map_state.py" />
         <option value="$PROJECT_DIR$/start_state.py" />
+        <option value="$PROJECT_DIR$/Big_map_state.py" />
+        <option value="$PROJECT_DIR$/Middle_map_state.py" />
+        <option value="$PROJECT_DIR$/game_framework.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="944" />
     <option name="y" value="136" />
     <option name="width" value="974" />
@@ -181,6 +138,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -192,13 +150,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../새 폴더3/날씨프로젝트" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Background" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -343,29 +300,21 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1227608" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-<<<<<<< HEAD
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49683878" visible="true" weight="0.3286334" />
-=======
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49947312" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4963119" weight="0.3286334" />
->>>>>>> Jik
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-<<<<<<< HEAD
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50316125" side_tool="true" visible="true" weight="0.3286334" />
-=======
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5036881" side_tool="true" visible="true" weight="0.3286334" />
->>>>>>> Jik
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -404,34 +353,27 @@
     <entry file="file://C:/Temp/BNZ.5cdcfebd1c905594/game_framework.py" />
     <entry file="file://C:/Temp/BNZ.5cdcfe151c8dc42b/menu_state.py" />
     <entry file="file://C:/Temp/BNZ.5cdcff4b1c927d47/stage1_state.py" />
-<<<<<<< HEAD
-=======
     <entry file="file://C:/Temp/BNZ.5cdcfecf1c9098e7/end_state.py" />
-    <entry file="file://C:/Temp/BNZ.5cdd0599120e21/game_framework.py">
+    <entry file="file://C:/Temp/BNZ.5cdd0599120e21/game_framework.py" />
+    <entry file="file://C:/Temp/BNZ.5cdd08431c770c/game_framework.py" />
+    <entry file="file://$PROJECT_DIR$/../../새 폴더3/날씨프로젝트/Mygame.py" />
+    <entry file="file://$PROJECT_DIR$/start_state.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-704">
-          <caret line="64" column="15" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Temp/BNZ.5cdd08431c770c/game_framework.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="209">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
->>>>>>> Jik
+    <entry file="file://$PROJECT_DIR$/tk_ex.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="50" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/api.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -439,84 +381,10 @@
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://C:/Temp/BNZ.5cdcfecf1c9098e7/end_state.py" />
-    <entry file="file://C:/Temp/BNZ.5cdd0599120e21/game_framework.py" />
-    <entry file="file://C:/Temp/BNZ.5cdd08431c770c/game_framework.py" />
-    <entry file="file://$PROJECT_DIR$/tk_ex.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="50" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="50" />
-=======
-    <entry file="file://$PROJECT_DIR$/Small_map_state.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game_framework.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-456">
-          <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tk_ex.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-135">
-          <caret line="79" column="42" selection-start-line="79" selection-start-column="25" selection-end-line="79" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../새 폴더3/날씨프로젝트/start_state.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="19" column="10" lean-forward="true" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
->>>>>>> Jik
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../새 폴더3/날씨프로젝트/Mygame.py" />
-    <entry file="file://$PROJECT_DIR$/start_state.py">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="209">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-=======
-        <state relative-caret-position="864">
-          <caret line="67" column="76" lean-forward="true" selection-start-line="67" selection-start-column="76" selection-end-line="67" selection-end-column="76" />
->>>>>>> Jik
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/game_framework.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="41" column="7" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-=======
-    <entry file="file://$PROJECT_DIR$/Middle_map_state.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
->>>>>>> Jik
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
@@ -525,31 +393,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Big_map_state.py">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="323">
-          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-=======
-        <state relative-caret-position="-305">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
->>>>>>> Jik
+        <state relative-caret-position="342">
+          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/start_state.py">
+    <entry file="file://$PROJECT_DIR$/Middle_map_state.py">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="323">
-          <caret line="20" column="8" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-=======
-        <state relative-caret-position="513">
-          <caret line="45" column="42" selection-start-line="45" selection-start-column="38" selection-end-line="45" selection-end-column="42" />
->>>>>>> Jik
+        <state relative-caret-position="66">
+          <caret line="114" column="71" selection-start-line="114" selection-start-column="71" selection-end-line="114" selection-end-column="71" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game_framework.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
         </state>
       </provider>
     </entry>
