@@ -5,6 +5,7 @@ import Small_map_state
 from tkinter import *
 from tkinter import font
 from tkinter import Tk, ttk, StringVar,messagebox
+import naverapi
 
 name = "Main"
 
@@ -33,8 +34,11 @@ def center(self):
         self.geometry("%dx%d+%d+%d" % (size + (x, y)))
 
 
-def Nation_info():
+def Nation_info(nation):
+    Small_map_state.nation = nation
     game_framework.run(Small_map_state)
+
+
 def run():
     global window,main_num
     window = Tk()
@@ -63,7 +67,7 @@ def run():
     map_label = Label(window, image=img)
     map_label.pack()
     if main_num==1:
-        nation1 = Button(window, text="영국", width=5,command = Nation_info)
+        nation1 = Button(window, text="영국", width=5, command=lambda: Nation_info("영국"))
         nation1.place(x=250, y=320)
         nation2 = Button(window, text="프랑스", width=5)
         nation2.place(x=250, y=355)
