@@ -1,6 +1,7 @@
 import game_framework
 import urllib.request
 import Big_map_state
+import Small_map_state
 from tkinter import *
 from tkinter import font
 from tkinter import Tk, ttk, StringVar,messagebox
@@ -16,12 +17,27 @@ def enter():
    run()
 
 def exit():
-   game_framework.change_state(Big_map_state)
+   window.destroy()
+   pass
 def pause():
     pass
+def Back():
+    window.destroy()
+    game_framework.run(Big_map_state)
+def center(self):
+        w = self.winfo_screenwidth()
+        h = self.winfo_screenheight()
+        size = tuple(int(_) for _ in self.geometry().split('+')[0].split('x'))
+        x = w / 2 - size[0] / 2 - 300
+        y = h / 2 - size[1] / 2 - 400
+        self.geometry("%dx%d+%d+%d" % (size + (x, y)))
+
+
+def Nation_info():
+    game_framework.run(Small_map_state)
 def run():
     global window,main_num
-    window = Toplevel()
+    window = Tk()
     if main_num==1:
         window.title('유럽')
         main_photo = 'photo\\Europe.png'
@@ -47,7 +63,7 @@ def run():
     map_label = Label(window, image=img)
     map_label.pack()
     if main_num==1:
-        nation1 = Button(window, text="영국", width=5)
+        nation1 = Button(window, text="영국", width=5,command = Nation_info)
         nation1.place(x=250, y=320)
         nation2 = Button(window, text="프랑스", width=5)
         nation2.place(x=250, y=355)
@@ -111,8 +127,9 @@ def run():
         nation4.place(x=430, y=170)
         nation5 = Button(window, text="아프카니스탄", width=10)
         nation5.place(x=520, y=160)
+    center(window)
     window.geometry('800x500')  # width x height + 가로격자+세로격자
-    button1 = Button(window, text="뒤로가기 아직안댐", width=50, command = exit)
+    button1 = Button(window, text="뒤로가기 아직안댐", width=50, command = Back)
     button1.place(x=00, y=0)
 
     window.mainloop()

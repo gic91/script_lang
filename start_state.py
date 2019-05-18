@@ -4,6 +4,8 @@ from tkinter import font
 import Big_map_state
 name = "StartState"
 
+
+
 def enter():
     pass
 
@@ -12,15 +14,25 @@ def update():
 
 def exit():
     window.destroy()
-    pass
+
 
 def process_next():
     game_framework.change_state(Big_map_state)
+    pass
+def center(self):
+    w = self.winfo_screenwidth()
+    h = self.winfo_screenheight()
+    size = tuple(int(_) for _ in self.geometry().split('+')[0].split('x'))
+    x = w / 2 - size[0] / 2-300
+    y = h / 2 - size[1] / 2-400
+    self.geometry("%dx%d+%d+%d" % (size + (x, y)))
 
 def run():
     global window
     window = Tk()
     window.title('세계 나라 정보 알리미')
+
+    center(window)
     window.geometry('500x800')  # width x height + 가로격자+세로격자
 
     main_photo = 'photo\\Main_photo.png'
@@ -31,7 +43,8 @@ def run():
     chosenFont = font.Font(family='the행복열매', size=40, weight='normal')
     button1 = Button(window,text="시작",command = process_next, font = chosenFont)
     button1.place(x=190,y=650)
-
+    button2 = Button(window,command = exit)
+    button2.place(x=200, y=200)
     window.mainloop()
 
 

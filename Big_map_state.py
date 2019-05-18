@@ -17,6 +17,14 @@ def resume():
 def exit():
     window.destroy()
 
+def center(self):
+    w = self.winfo_screenwidth()
+    h = self.winfo_screenheight()
+    size = tuple(int(_) for _ in self.geometry().split('+')[0].split('x'))
+    x = w / 2 - size[0] / 2-300
+    y = h / 2 - size[1] / 2-400
+    self.geometry("%dx%d+%d+%d" % (size + (x, y)))
+
 def process_Euro():
     global main_num
     #대륙별 다른 사진 출력
@@ -24,26 +32,27 @@ def process_Euro():
     game_framework.change_state(Middle_map_state)
 def process_Asia():
     Middle_map_state.Main_num(2)
-    game_framework.push_state(Middle_map_state)
+    game_framework.change_state(Middle_map_state)
 def process_Ocea():
     Middle_map_state.Main_num(3)
-    game_framework.push_state(Middle_map_state)
+    game_framework.change_state(Middle_map_state)
 def process_Afri():
     Middle_map_state.Main_num(4)
-    game_framework.push_state(Middle_map_state)
+    game_framework.change_state(Middle_map_state)
 def process_N_Amer():
     Middle_map_state.Main_num(5)
-    game_framework.push_state(Middle_map_state)
+    game_framework.change_state(Middle_map_state)
 def process_S_Amer():
     Middle_map_state.Main_num(6)
-    game_framework.push_state(Middle_map_state)
+    game_framework.change_state(Middle_map_state)
 def process_M_Asia():
     Middle_map_state.Main_num(7)
-    game_framework.push_state(Middle_map_state)
+    game_framework.change_state(Middle_map_state)
 def run():
     global window
     window = Tk()
     window.title('세계 지도')
+    center(window)
     window.geometry('800x500')  # width x height + 가로격자+세로격자
 
     main_photo = 'photo\\Main_map.png'
