@@ -16,7 +16,14 @@ def resume():
     pass
 def exit():
     window.destroy()
-    pass
+
+def center(self):
+    w = self.winfo_screenwidth()
+    h = self.winfo_screenheight()
+    size = tuple(int(_) for _ in self.geometry().split('+')[0].split('x'))
+    x = w / 2 - size[0] / 2-300
+    y = h / 2 - size[1] / 2-400
+    self.geometry("%dx%d+%d+%d" % (size + (x, y)))
 
 def process_Euro():
     global main_num
@@ -45,6 +52,7 @@ def run():
     global window
     window = Tk()
     window.title('세계 지도')
+    center(window)
     window.geometry('800x500')  # width x height + 가로격자+세로격자
 
     main_photo = 'photo\\Main_map.png'
