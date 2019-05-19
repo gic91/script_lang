@@ -40,13 +40,20 @@ def run():
     map_label = Label(window)
     map_label.pack()
 
+
     center(window)
     window.geometry('500x500')  # width x height + 가로격자+세로격자
-    button1 = Button(window, text="", width=10)
-    button1.place(x=00, y=0)
+    chosenFont = font.Font(family='굴림체', size=10, weight='normal')
 
-    chosenFont = font.Font(family='the행복열매', size=20, weight='normal')
-    button00 = Button(window, text="X", command=exit, font=chosenFont)
+    firstNameLabel = Label(window, text="국가명 "+nation,font=chosenFont)  # 폰트설정
+    firstNameLabel.place(x=30,y=20)
+
+    secondNameLabel = Label(window, text=description, font=chosenFont)  # 폰트설정
+    secondNameLabel.place(x=30, y=120)
+
+
+    chosenFont2 = font.Font(family='굴림체', size=20, weight='normal')
+    button00 = Button(window, text="X", command=exit, font=chosenFont2)
     button00.place(x=460, y=0)
     window.mainloop()
 
