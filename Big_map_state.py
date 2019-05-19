@@ -75,6 +75,9 @@ def run():
     button7 = Button(window, text="중동", command=process_M_Asia, width=5)
     button7.place(x=150, y=230)
 
+    chosenFont = font.Font(family='the행복열매', size=20, weight='normal')
+    button00 = Button(window, text="X", command=sys.exit, font =chosenFont)
+    button00.place(x=760, y=0)
     window.mainloop()
 
 

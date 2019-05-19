@@ -2,6 +2,7 @@ import game_framework
 from tkinter import *
 from tkinter import font
 import Big_map_state
+import sys
 name = "StartState"
 
 
@@ -41,10 +42,11 @@ def run():
     map_label = Label(window, image=img)
     map_label.pack()
     chosenFont = font.Font(family='the행복열매', size=40, weight='normal')
+    chosenFont2 = font.Font(family='the행복열매', size=20, weight='normal')
     button1 = Button(window,text="시작",command = process_next, font = chosenFont)
     button1.place(x=190,y=650)
-    button2 = Button(window,command = exit)
-    button2.place(x=200, y=200)
+    button2 = Button(window, text="X", command=sys.exit, font=chosenFont2)
+    button2.place(x=460, y=0)
     window.mainloop()
 
 

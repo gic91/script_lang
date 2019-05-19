@@ -25,6 +25,7 @@ def pause():
 def Back():
     window.destroy()
     game_framework.run(Big_map_state)
+
 def center(self):
         w = self.winfo_screenwidth()
         h = self.winfo_screenheight()
@@ -133,9 +134,12 @@ def run():
         nation5.place(x=520, y=160)
     center(window)
     window.geometry('800x500')  # width x height + 가로격자+세로격자
-    button1 = Button(window, text="뒤로가기 아직안댐", width=50, command = Back)
+    button1 = Button(window, text="뒤로가기", width=30, command = Back)
     button1.place(x=00, y=0)
 
+    chosenFont = font.Font(family='the행복열매', size=20, weight='normal')
+    button00 = Button(window, text="X", command=sys.exit, font=chosenFont)
+    button00.place(x=760, y=0)
     window.mainloop()
 
 
