@@ -12,8 +12,6 @@ import openurl
 name = "Main"
 
 nation = ""
-
-
 def enter():
     global nation
     global description, link, thumbnail
@@ -37,41 +35,73 @@ def center(self):
 def openwebbrowser(link):
     webbrowser.open(link)
 
+def ButtonState1():
+    imageLabel.place(x=300, y=75)
+    chosenFont = font.Font(family='굴림체', size=10, weight='normal')
 
+    firstNameLabel = Label(window, text="국가명 " + nation, font=chosenFont)  # 국가명
+    firstNameLabel.place(x=30, y=70)
+
+    secondNameLabel = Label(window, text=description, font=chosenFont)  # ....
+    secondNameLabel.place(x=30, y=170)
+
+
+    linkbutton = Button(window, text="더보기", command=lambda: openwebbrowser(link))
+    linkbutton.pack()
+
+
+def ButtonState2():
+    imageLabel.place(x=100, y=175)
+    chosenFont = font.Font(family='굴림체', size=10, weight='normal')
+
+    firstNameLabel = Label(window, text="국가명 " + nation, font=chosenFont)  # 국가명
+    firstNameLabel.place(x=230, y=50)
+
+    secondNameLabel = Label(window, text=description, font=chosenFont)  # ....
+    secondNameLabel.place(x=330, y=270)
+
+    linkbutton = Button(window, text="더보기", command=lambda: openwebbrowser(link))
+    linkbutton.pack()
+
+
+def ButtonState3():
+    pass
 def run():
     global description, link, thumbnail
-    image = "thumbnail.jpg"
-    mem = urllib.request.urlopen(thumbnail).read()
-    with open(image, mode="wb") as f:
-        f.write(mem)
-    global nationinfo
-    print(nationinfo)
+    #### 창 만들기
     global window
     window = Toplevel()
     map_label = Label(window)
     map_label.pack()
-
     center(window)
     window.geometry('500x500')  # width x height + 가로격자+세로격자
-
+    global description, link, thumbnail, imageLabel
+    image = "thumbnail.jpg"
+    mem = urllib.request.urlopen(thumbnail).read()
+    with open(image, mode="wb") as f:
+        f.write(mem)
     img = ImageTk.PhotoImage(Image.open(image))
     imageLabel = Label(window, image=img)
     imageLabel.pack()
+    #####
+    global nationinfo
+    print(nationinfo)
+    ##### 처음시작은 1번
+    ButtonState1()
+    ######
 
-    chosenFont = font.Font(family='굴림체', size=10, weight='normal')
+    buttonTime = Button(window, text="날씨&시간", command=ButtonState1)
+    buttonTime.place(x=80, y=0)
 
-    firstNameLabel = Label(window, text="국가명 "+nation, font=chosenFont)  # 폰트설정
-    firstNameLabel.place(x=30, y=20)
+    buttonTime2 = Button(window, text="날씨&시간", command=ButtonState2)
+    buttonTime2.place(x=280, y=0)
 
-    secondNameLabel = Label(window, text=description, font=chosenFont)  # 폰트설정
-    secondNameLabel.place(x=30, y=120)
+    buttonTime3 = Button(window, text="날씨&시간", command=ButtonState3)
+    buttonTime3.place(x=380, y=0)
 
-    chosenFont2 = font.Font(family='굴림체', size=20, weight='normal')
+    chosenFont2 = font.Font(family='굴림체', size=10, weight='normal')
     button00 = Button(window, text="X", command=exit, font=chosenFont2)
-    button00.place(x=460, y=0)
-
-    linkbutton = Button(window, text="더보기", command=lambda: openwebbrowser(link))
-    linkbutton.pack()
+    button00.place(x=480, y=0)
 
     window.mainloop()
 
