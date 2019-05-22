@@ -30,6 +30,6 @@ def get_nation_info(nation):
 
         for element in root.findall("channel"):
             item = element.find("item")
-            return item.findtext("description").replace("<b>"+nation+"</b>", nation), item.findtext("link")
+            return item.findtext("description").replace("<b>"+nation+"</b>", nation), item.findtext("link"), item.findtext("thumbnail")
     else:
         print("Error Code:" + rescode)
