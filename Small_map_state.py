@@ -7,6 +7,7 @@ import naverapi
 import urllib.request
 from PIL import ImageTk, Image
 import webbrowser
+import openurl
 
 name = "Main"
 
@@ -16,8 +17,10 @@ nation = ""
 def enter():
     global nation
     global description, link, thumbnail
-    # 국기 가져와서 사진으로 넣기
     description, link, thumbnail = naverapi.get_nation_info(nation)
+    global nationinfo
+    nationinfo = openurl.infotolist(link)
+
     run()
 
 
@@ -41,6 +44,8 @@ def run():
     mem = urllib.request.urlopen(thumbnail).read()
     with open(image, mode="wb") as f:
         f.write(mem)
+    global nationinfo
+    print(nationinfo)
     global window
     window = Toplevel()
     map_label = Label(window)
@@ -67,7 +72,6 @@ def run():
 
     linkbutton = Button(window, text="더보기", command=lambda: openwebbrowser(link))
     linkbutton.pack()
-
 
     window.mainloop()
 
