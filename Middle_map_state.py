@@ -9,7 +9,8 @@ import naverapi
 
 name = "Main"
 
-#대륙별 다른 번호 부여
+
+# 대륙별 다른 번호 부여
 def Main_num(num):
     global main_num
     main_num = num
@@ -25,6 +26,7 @@ def pause():
 def Back():
     window.destroy()
     game_framework.run(Big_map_state)
+
 
 def center(self):
         w = self.winfo_screenwidth()
@@ -67,8 +69,8 @@ def run():
     img = PhotoImage(file=main_photo)
     map_label = Label(window, image=img)
     map_label.pack()
-    #29개국 설정
-    if main_num==1:
+    # 29개국 설정
+    if main_num == 1:
         nation1 = Button(window, text="영국", width=5, command=lambda: Nation_info("영국"))
         nation1.place(x=250, y=320)
         nation2 = Button(window, text="프랑스", width=5, command=lambda: Nation_info("프랑스"))
@@ -79,7 +81,7 @@ def run():
         nation4.place(x=300, y=320)
         nation5 = Button(window, text="우크라이나", width=10, command=lambda: Nation_info("우크라이나"))
         nation5.place(x=380, y=350)
-    elif main_num==2:
+    elif main_num == 2:
         nation1 = Button(window, text="러시아", width=5, command=lambda: Nation_info("러시아"))
         nation1.place(x=430, y=140)
         nation2 = Button(window, text="중국", width=5, command=lambda: Nation_info("중국"))
@@ -90,12 +92,12 @@ def run():
         nation4.place(x=545, y=290)
         nation5 = Button(window, text="대한민국", width=6, command=lambda: Nation_info("대한민국"))
         nation5.place(x=460, y=295)
-    elif main_num==3:
+    elif main_num == 3:
         nation1 = Button(window, text="오스트레일리아", width=12, command=lambda: Nation_info("오스트레일리아"))
         nation1.place(x=300, y=270)
         nation2 = Button(window, text="뉴질랜드", width=7, command=lambda: Nation_info("뉴질랜드"))
         nation2.place(x=510, y=380)
-    elif main_num==4:
+    elif main_num == 4:
         nation1 = Button(window, text="이집트", width=5, command=lambda: Nation_info("이집트"))
         nation1.place(x=415, y=110)
         nation2 = Button(window, text="남아프리카 공화국", width=14, command=lambda: Nation_info("남아프리카 공화국"))
@@ -106,12 +108,12 @@ def run():
         nation4.place(x=460, y=250)
         nation5 = Button(window, text="나이지리아", width=9, command=lambda: Nation_info("나이지리아"))
         nation5.place(x=340, y=210)
-    elif main_num==5:
+    elif main_num == 5:
         nation1 = Button(window, text="케나다", width=6, command=lambda: Nation_info("케나다"))
         nation1.place(x=340, y=240)
         nation2 = Button(window, text="미국", width=5, command=lambda: Nation_info("미국"))
         nation2.place(x=380, y=315)
-    elif main_num==6:
+    elif main_num == 6:
         nation1 = Button(window, text="멕시코", width=6, command=lambda: Nation_info("멕시코"))
         nation1.place(x=230, y=25)
         nation2 = Button(window, text="브라질", width=6, command=lambda: Nation_info("브라질"))
@@ -122,7 +124,7 @@ def run():
         nation4.place(x=335, y=135)
         nation5 = Button(window, text="쿠바", width=5, command=lambda: Nation_info("쿠바"))
         nation5.place(x=340, y=25)
-    elif main_num==7:
+    elif main_num == 7:
         nation1 = Button(window, text="이라크", width=7, command=lambda: Nation_info("이라크"))
         nation1.place(x=320, y=165)
         nation2 = Button(window, text="사우디 아라비아", width=13, command=lambda: Nation_info("사우디 아라비아"))
@@ -131,7 +133,7 @@ def run():
         nation3.place(x=250, y=80)
         nation4 = Button(window, text="이란", width=5, command=lambda: Nation_info("이란"))
         nation4.place(x=430, y=170)
-        nation5 = Button(window, text="아프카니스탄", width=10, command=lambda: Nation_info("아프가니스탄"))
+        nation5 = Button(window, text="아프가니스탄", width=10, command=lambda: Nation_info("아프가니스탄"))
         nation5.place(x=520, y=160)
     center(window)
     window.geometry('800x500')  # width x height + 가로격자+세로격자
@@ -144,17 +146,9 @@ def run():
     window.mainloop()
 
 
-
 def pause():
     pass
 
 
 def resume():
     pass
-
-
-
-
-
-
-
