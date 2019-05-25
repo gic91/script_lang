@@ -22,9 +22,6 @@ def enter():
     global nationinfo
     nationinfo = openurl.infotolist(link)
 
-    run()
-
-
 # 창 가운데로 정렬
 def center(self):
     w = self.winfo_screenwidth()
@@ -38,9 +35,10 @@ def center(self):
 def openwebbrowser(link):
     webbrowser.open(link)
 
+#글상자
 def TextBox(name,place_x,place_y,size_w,size_y,color,fill):
     t_start = Text(name, width=size_w, height=size_y)
-    t_start.config( foreground=color)
+    t_start.config(font="the행복열매", foreground=color)
     t_start.insert(1.0, "" +fill )
     t_start.pack(side=LEFT, fill=Y)
     s_start = Scrollbar(name)
@@ -49,37 +47,50 @@ def TextBox(name,place_x,place_y,size_w,size_y,color,fill):
     t_start.config(yscrollcommand=s_start.set)
     name.pack(side=LEFT, fill=Y)
     name.place(x=place_x, y=place_y)
+#스크롤 없는 글상자
 def TextBox_nonscroll(name,place_x,place_y,size_w,size_y,fill):
     t_start = Text(name, width=size_w, height=size_y)
+    t_start.config(font="굴림체")
+    t_start.config(font=3)
     t_start.insert(1.0, "" +fill )
     t_start.pack(side=LEFT, fill=Y)
     name.pack(side=LEFT, fill=Y)
     name.place(x=place_x, y=place_y)
+
+#화면 지우개
+def erase():
+    ###다른 함수로갔을때 잔상이 남아있는문제
+    ###지우는 법을 못찾겠어서 빈글자로 덮어버림
+    ###국기도 다시 불러온다
+    chosenFont = font.Font(family='굴림체', size=1000, weight='normal')
+    firstNameLabel = Label(window, text="    ", font=chosenFont)  # 국가명
+    firstNameLabel.place(x=0, y=35)
+    Thunbnail()
 #국가 백과사전
 def ButtonState1():
-    window.geometry('500x1000')
-
+    window.geometry('500x800')
+    erase()
     imageLabel.place(x=300, y=35)
     chosenFont = font.Font(family='굴림체', size=20, weight='normal')
-    NameLabel = Label(window, text= nation, font=chosenFont)  # 국가명
+    NameLabel = Label(window, text= nation, font=chosenFont,background="black",foreground="white")  # 국가명
     NameLabel.place(x=30, y=30)
 
     #요약
     box1 = Frame(window)
-    chosenFont = font.Font(family='굴림체', size=2, weight='normal')
-    TextBox(box1,20,60,35,5,"black",description)
+    TextBox(box1,15,60,33,4,"black",description)
 
+    #표
     for box_key,box_value,b in zip(range(8),range(8),range(8)):
         box_key= Frame(window)
         box_value = Frame(window)
-        TextBox_nonscroll(box_key, 20, 380+(b*80), 10, 1,   nationinfo[b][0])
-        TextBox(box_value, 100, 380 + (b *80), 15, 3,"blue", nationinfo[b][1])
+        TextBox_nonscroll(box_key, 10, 180+(b*80), 13, 1,   nationinfo[b][0])
+        TextBox(box_value, 100, 180 + (b *80), 15, 3,"blue", nationinfo[b][1])
 
     for box_key2,box_value2,b2,c in zip(range(8,16),range(8,16),range(8),range(8,16)):
         box_key2= Frame(window)
         box_value2 = Frame(window)
-        TextBox_nonscroll(box_key2, 270, 380+(b2*80), 10, 1,   nationinfo[c][0])
-        TextBox(box_value2, 350, 380 + (b2 *80), 15, 3,"blue", nationinfo[c][1])
+        TextBox_nonscroll(box_key2, 260, 180+(b2*80), 13, 1,   nationinfo[c][0])
+        TextBox(box_value2, 355, 180 + (b2 *80), 15, 3,"blue", nationinfo[c][1])
 
     linkbutton = Button(window, text="더보기", command=lambda: openwebbrowser(link))
     linkbutton.place(x=250, y=130)
@@ -87,7 +98,11 @@ def ButtonState1():
 #날씨 &시간
 def ButtonState2():
     window.geometry('800x500')
+
+
+    erase()
     imageLabel.place(x=100, y=175)
+    ###
     chosenFont = font.Font(family='굴림체', size=10, weight='normal')
     firstNameLabel = Label(window, text="국가명 " + nation, font=chosenFont)  # 국가명
     firstNameLabel.place(x=10, y=50)
@@ -100,19 +115,11 @@ def ButtonState2():
 
 #항공편
 def ButtonState3():
-    chosenFont = font.Font(family='굴림체', size=1000, weight='normal')
-    firstNameLabel = Label(window, text="    " , font=chosenFont)  # 국가명
-    firstNameLabel.place(x=0, y=35)
-
-
-
-    image = "thumbnail.jpg"
-    mem = urllib.request.urlopen(thumbnail).read()
-    with open(image, mode="wb") as f:
-        f.write(mem)
-    img = ImageTk.PhotoImage(Image.open(image))
+    pass
+#사진 불러오기 함수
+def Thunbnail():
+    global imageLabel
     imageLabel = Label(window, image=img)
-    imageLabel.pack()
     #####
 def run():
     #### 창 만들기
@@ -123,15 +130,17 @@ def run():
     center(window)
     window.geometry('500x500')  # width x height + 가로격자+세로격자
 
-    global description, link, thumbnail, imageLabel
+    global img
+    description, link, thumbnail = naverapi.get_nation_info(nation)
     image = "thumbnail.jpg"
     mem = urllib.request.urlopen(thumbnail).read()
     with open(image, mode="wb") as f:
         f.write(mem)
     img = ImageTk.PhotoImage(Image.open(image))
-    imageLabel = Label(window, image=img)
-    imageLabel.pack()
-    #####
+
+
+    Thunbnail()
+
     global nationinfo
     print(nationinfo)
 
