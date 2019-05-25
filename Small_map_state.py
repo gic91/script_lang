@@ -12,6 +12,9 @@ import openurl
 name = "Main"
 
 nation = ""
+
+chapter = 1
+
 def enter():
     global nation
     global description, link, thumbnail
@@ -57,7 +60,6 @@ def ButtonState1():
     window.geometry('500x1000')
 
     imageLabel.place(x=300, y=35)
-
     chosenFont = font.Font(family='굴림체', size=20, weight='normal')
     NameLabel = Label(window, text= nation, font=chosenFont)  # 국가명
     NameLabel.place(x=30, y=30)
@@ -87,7 +89,6 @@ def ButtonState2():
     window.geometry('800x500')
     imageLabel.place(x=100, y=175)
     chosenFont = font.Font(family='굴림체', size=10, weight='normal')
-
     firstNameLabel = Label(window, text="국가명 " + nation, font=chosenFont)  # 국가명
     firstNameLabel.place(x=10, y=50)
 
@@ -99,17 +100,29 @@ def ButtonState2():
 
 #항공편
 def ButtonState3():
-    pass
+    chosenFont = font.Font(family='굴림체', size=1000, weight='normal')
+    firstNameLabel = Label(window, text="    " , font=chosenFont)  # 국가명
+    firstNameLabel.place(x=0, y=35)
+
+
+
+    image = "thumbnail.jpg"
+    mem = urllib.request.urlopen(thumbnail).read()
+    with open(image, mode="wb") as f:
+        f.write(mem)
+    img = ImageTk.PhotoImage(Image.open(image))
+    imageLabel = Label(window, image=img)
+    imageLabel.pack()
+    #####
 def run():
-    global description, link, thumbnail
     #### 창 만들기
     global window
     window = Toplevel()
-
     map_label = Label(window)
     map_label.pack()
     center(window)
     window.geometry('500x500')  # width x height + 가로격자+세로격자
+
     global description, link, thumbnail, imageLabel
     image = "thumbnail.jpg"
     mem = urllib.request.urlopen(thumbnail).read()
@@ -121,9 +134,7 @@ def run():
     #####
     global nationinfo
     print(nationinfo)
-    ##### 처음시작은 1번
-    ButtonState1()
-    ######
+
 
 
 
@@ -140,6 +151,7 @@ def run():
     button00 = Button(window, text="X", command=exit, font=chosenFont2)
     button00.place(x=480, y=0)
 
+    ButtonState1()
     window.mainloop()
 
 
