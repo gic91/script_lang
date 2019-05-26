@@ -4,6 +4,7 @@ from tkinter import *
 from tkinter import font
 from tkinter import Tk, ttk, StringVar, messagebox
 import naverapi
+import capitalweather
 import urllib.request
 from PIL import ImageTk, Image
 import webbrowser
@@ -16,12 +17,16 @@ nation = ""
 chapter = 1
 
 def enter():
+    ## 백과사전
     global nation
     global description, link, thumbnail
     description, link, thumbnail = naverapi.get_nation_info(nation)
     global nationinfo
     nationinfo = openurl.infotolist(link)
 
+    #날씨
+    global w_Sun,w_Time, w_WindD, w_WindS, w_Tem, w_Pres, w_Cloud
+    w_Sun,w_Time, w_WindD, w_WindS, w_Tem, w_Pres, w_Cloud = capitalweather.info(nation)
 # 창 가운데로 정렬
 def center(self):
     w = self.winfo_screenwidth()
@@ -30,11 +35,8 @@ def center(self):
     x = w / 2 - size[0] / 2 - 200
     y = h / 2 - size[1] / 2 - 550
     self.geometry("%dx%d+%d+%d" % (size + (x, y)))
-
-
 def openwebbrowser(link):
     webbrowser.open(link)
-
 #글상자
 def TextBox(name,place_x,place_y,size_w,size_y,color,fill):
     t_start = Text(name, width=size_w, height=size_y)
@@ -66,6 +68,9 @@ def erase():
     firstNameLabel = Label(window, text="    ", font=chosenFont)  # 국가명
     firstNameLabel.place(x=0, y=30)
     Thunbnail()
+def str_remove():
+    for i in range(40):
+        w_Time[i].replace("{","")
 #국가 백과사전
 def ButtonState1():
     window.geometry('500x800')
@@ -78,7 +83,7 @@ def ButtonState1():
     #요약
     box1 = Frame(window)
     TextBox(box1,10,60,33,4,"black",description)
-
+    print(type(nationinfo))
     #표
     for box_key,box_value,b in zip(range(8),range(8),range(8)):
         box_key= Frame(window)
@@ -100,7 +105,29 @@ def ButtonState1():
 def ButtonState2():
     window.geometry('500x800')
     erase()
-
+    # str_remove()
+    for
+    NameLabel = Label(window, text=w_Time[1])  # 국가명
+    NameLabel.place(x=10, y=0)
+    NameLabel = Label(window, text=w_WindD[1])
+    NameLabel.place(x=10, y=30)
+    NameLabel = Label(window, text=w_WindS[1])
+    NameLabel.place(x=10, y=130)
+    NameLabel = Label(window, text=w_Tem[1])
+    NameLabel.place(x=10, y=230)
+    NameLabel = Label(window, text=w_Pres[1])
+    NameLabel = Label(window, text=w_Cloud[1])
+    NameLabel.place(x=10, y=430)
+    NameLabel = Label(window, text=w_Sun)
+    NameLabel.place(x=10, y=530)
+    print(type(w_Sun))
+    # for i in range(40):
+    #     print(type(w_Time))
+    #     print(type(w_WindD))
+    #     print(type(w_WindS))
+    #     print(type(w_Tem))
+    #     print(type(w_Pres))
+    #     print(type(w_Cloud))
 
 #항공편
 def ButtonState3():
@@ -129,12 +156,6 @@ def run():
 
 
     Thunbnail()
-
-    global nationinfo
-    print(nationinfo)
-
-
-
 
     buttonTime = Button(window, text="국가 백과사전", command=ButtonState1)
     buttonTime.place(x=50, y=0)

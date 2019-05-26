@@ -2,7 +2,7 @@ import urllib.request
 import xml.etree.ElementTree as ET
 
 
-capitals = {'bg': 'london', 'de': 'berlin', 'fr': 'paris', 'ua': 'kiev', 'es': 'madrid'
+capitals = {'bg': 'europe/london', 'de': 'berlin', 'fr': 'paris', 'ua': 'kiev', 'es': 'madrid'
             , 'tr': 'ankara', 'iq': 'baghdad', 'ir': 'tehran', 'af': 'kabul', 'sa': 'riyadh'
             , 'ma': 'rabat', 'eg': 'cairo', 'ng': 'abuja', 'ke': 'nairobi', 'za': 'pretoria'
             , 'ru': 'moscow', 'cn': 'beijing', 'in': 'new delhi', 'kr': 'seoul', 'jp': 'tokyo'
@@ -71,7 +71,7 @@ def info(nation):
     elif nation == "아프가니스탄":
         nation = 'af'
     capital = urllib.parse.quote(capitals[nation])
-    url = "http://api.openweathermap.org/data/2.5/forecast?mode=xml&appid=ee0eb26bb4ce4382c4ba07b8c6f87635&lang=kr&q=" + capital
+    url = "http://worldtimeapi.org/api/timezone/" + capital
     request = urllib.request.Request(url)
     response = urllib.request.urlopen(request)
     rescode = response.getcode()
