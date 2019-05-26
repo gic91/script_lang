@@ -38,7 +38,7 @@ def openwebbrowser(link):
 #글상자
 def TextBox(name,place_x,place_y,size_w,size_y,color,fill):
     t_start = Text(name, width=size_w, height=size_y)
-    t_start.config(font="the행복열매", foreground=color)
+    t_start.config(font="굴림체", foreground=color)
     t_start.insert(1.0, "" +fill )
     t_start.pack(side=LEFT, fill=Y)
     s_start = Scrollbar(name)
@@ -64,7 +64,7 @@ def erase():
     ###국기도 다시 불러온다
     chosenFont = font.Font(family='굴림체', size=1000, weight='normal')
     firstNameLabel = Label(window, text="    ", font=chosenFont)  # 국가명
-    firstNameLabel.place(x=0, y=35)
+    firstNameLabel.place(x=0, y=30)
     Thunbnail()
 #국가 백과사전
 def ButtonState1():
@@ -73,11 +73,11 @@ def ButtonState1():
     imageLabel.place(x=300, y=35)
     chosenFont = font.Font(family='굴림체', size=20, weight='normal')
     NameLabel = Label(window, text= nation, font=chosenFont,background="black",foreground="white")  # 국가명
-    NameLabel.place(x=30, y=30)
+    NameLabel.place(x=10, y=30)
 
     #요약
     box1 = Frame(window)
-    TextBox(box1,15,60,33,4,"black",description)
+    TextBox(box1,10,60,33,4,"black",description)
 
     #표
     for box_key,box_value,b in zip(range(8),range(8),range(8)):
@@ -92,26 +92,15 @@ def ButtonState1():
         TextBox_nonscroll(box_key2, 260, 180+(b2*80), 13, 1,   nationinfo[c][0])
         TextBox(box_value2, 355, 180 + (b2 *80), 15, 3,"blue", nationinfo[c][1])
 
-    linkbutton = Button(window, text="더보기", command=lambda: openwebbrowser(link))
-    linkbutton.place(x=250, y=130)
+    linkbutton = Button(window, text="네이버 백과사전으로", command=lambda: openwebbrowser(link))
+    linkbutton.config(foreground = "blue" )
+    linkbutton.place(x=170, y=130)
 
 #날씨 &시간
 def ButtonState2():
-    window.geometry('800x500')
-
-
+    window.geometry('500x800')
     erase()
-    imageLabel.place(x=100, y=175)
-    ###
-    chosenFont = font.Font(family='굴림체', size=10, weight='normal')
-    firstNameLabel = Label(window, text="국가명 " + nation, font=chosenFont)  # 국가명
-    firstNameLabel.place(x=10, y=50)
 
-    secondNameLabel = Label(window, text=description, font=chosenFont)  # ....
-    secondNameLabel.place(x=20, y=170)
-
-    linkbutton = Button(window, text="더보기", command=lambda: openwebbrowser(link))
-    linkbutton.place(x=200, y=50)
 
 #항공편
 def ButtonState3():
