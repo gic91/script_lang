@@ -68,9 +68,25 @@ def erase():
     firstNameLabel = Label(window, text="    ", font=chosenFont)  # 국가명
     firstNameLabel.place(x=0, y=30)
     Thunbnail()
-def str_remove():
-    for i in range(40):
-        w_Time[i].replace("{","")
+
+def MakeValue():
+    global W_Sun, W_Time, W_WindD, W_WindS, W_Tem, W_Pres, W_Cloud
+    W_Time = []
+    W_Sun =[]
+    W_WindD= []
+    W_WindS = []
+    W_Tem= []
+    W_Cloud= []
+    W_Pres= []
+    for a, b in zip(range(40),range(40)):
+        W_Time.append(list(w_Time[a].values()))
+        del(W_Time[a][1])
+        W_WindD.append(list(w_WindD[a].values()))
+        W_WindS.append(list(w_WindS[a].values()))
+        W_Tem.append(list(w_Tem[a].values()))
+        W_Pres.append(list(w_Pres[a].values()))
+        W_Cloud.append(list(w_Cloud[a].values()))
+        W_Sun = list(w_Sun.values())
 #국가 백과사전
 def ButtonState1():
     window.geometry('500x800')
@@ -83,7 +99,6 @@ def ButtonState1():
     #요약
     box1 = Frame(window)
     TextBox(box1,10,60,33,4,"black",description)
-    print(type(nationinfo))
     #표
     for box_key,box_value,b in zip(range(8),range(8),range(8)):
         box_key= Frame(window)
@@ -102,32 +117,42 @@ def ButtonState1():
     linkbutton.place(x=170, y=130)
 
 #날씨 &시간
+def clickMe():
+     global c_current
+     c_current=combo.current()
+     print(c_current)
+     print(combo.current())
 def ButtonState2():
     window.geometry('500x800')
     erase()
-    # str_remove()
-    for
-    NameLabel = Label(window, text=w_Time[1])  # 국가명
-    NameLabel.place(x=10, y=0)
-    NameLabel = Label(window, text=w_WindD[1])
+    MakeValue()
+
+    chosenFont = font.Font(family='굴림체', size=20, weight='normal')
+    NameLabel = Label(window, text=nation, font=chosenFont, background="black", foreground="white")  # 국가명
     NameLabel.place(x=10, y=30)
-    NameLabel = Label(window, text=w_WindS[1])
-    NameLabel.place(x=10, y=130)
-    NameLabel = Label(window, text=w_Tem[1])
-    NameLabel.place(x=10, y=230)
-    NameLabel = Label(window, text=w_Pres[1])
-    NameLabel = Label(window, text=w_Cloud[1])
-    NameLabel.place(x=10, y=430)
-    NameLabel = Label(window, text=w_Sun)
-    NameLabel.place(x=10, y=530)
-    print(type(w_Sun))
-    # for i in range(40):
-    #     print(type(w_Time))
-    #     print(type(w_WindD))
-    #     print(type(w_WindS))
-    #     print(type(w_Tem))
-    #     print(type(w_Pres))
-    #     print(type(w_Cloud))
+
+    global combo
+    str = StringVar()
+    combo = ttk.Combobox(window, width=20, textvariable=str,values=W_Time)
+    combo.place(x=200,y=50)
+    combo.current(0)
+
+    buttonTime = Button(window, text="확인", command=clickMe)
+    buttonTime.place(x=370, y=50)
+
+    NameLabel2 = Label(window, text=W_WindD[combo.current()])
+    NameLabel2.place(x=10, y=230)
+    NameLabel3 = Label(window, text=W_WindS[c_current])
+    NameLabel3.place(x=10, y=260)
+    NameLabel4= Label(window, text=W_Tem[c_current])
+    NameLabel4.place(x=10, y=290)
+    NameLabel5 = Label(window, text=W_Pres[c_current])
+    NameLabel5.place(x=10, y=310)
+    NameLabel6 = Label(window, text=W_Cloud[c_current])
+    NameLabel6.place(x=10, y=340)
+    NameLabel7 = Label(window, text=W_Sun[c_current])
+    NameLabel7.place(x=10, y=370)
+
 
 #항공편
 def ButtonState3():

@@ -76,17 +76,9 @@ def info(nation):
     response = urllib.request.urlopen(request)
     rescode = response.getcode()
 
-    w_Sun = []
-    w_Time = []
-    w_WindD = []
-    w_WindS = []
-    w_Tem = []
-    w_Pres = []
-    w_Cloud = []
-
     if rescode == 200:
         response_body = response.read()
-        filename = "capitalweather.xml"
+        filename = "worldtime.xml"
         f = open(filename, "wb")
         f.write(response_body)
         f.close()
