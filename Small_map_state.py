@@ -60,13 +60,13 @@ def TextBox_nonscroll(name,place_x,place_y,size_w,size_y,fill):
     name.place(x=place_x, y=place_y)
 
 #화면 지우개
-def erase():
+def erase(y):
     ###다른 함수로갔을때 잔상이 남아있는문제
     ###지우는 법을 못찾겠어서 빈글자로 덮어버림
     ###국기도 다시 불러온다
     chosenFont = font.Font(family='굴림체', size=1000, weight='normal')
     firstNameLabel = Label(window, text="    ", font=chosenFont)  # 국가명
-    firstNameLabel.place(x=0, y=30)
+    firstNameLabel.place(x=0, y=y)
     Thunbnail()
 
 def MakeValue():
@@ -90,7 +90,7 @@ def MakeValue():
 #국가 백과사전
 def ButtonState1():
     window.geometry('500x800')
-    erase()
+    erase(30)
     imageLabel.place(x=300, y=35)
     chosenFont = font.Font(family='굴림체', size=20, weight='normal')
     NameLabel = Label(window, text= nation, font=chosenFont,background="black",foreground="white")  # 국가명
@@ -116,42 +116,52 @@ def ButtonState1():
     linkbutton.config(foreground = "blue" )
     linkbutton.place(x=170, y=130)
 
-#날씨 &시간
 def clickMe():
      global c_current
+     erase(200)
      c_current=combo.current()
+     LabelFont = font.Font(family='굴림체', size=20, weight='normal')
+     NameLabel2_1 = Label(window, text="바람 방향 :",font= LabelFont )
+     NameLabel2_1.place(x=10, y=130)
+     NameLabel2 = Label(window, text=W_WindD[c_current],foreground = "blue")
+     NameLabel2.place(x=210, y=130)
+     NameLabel3_1 = Label(window, text="바람 세기 :",font= LabelFont )
+     NameLabel3_1.place(x=10, y=180)
+     NameLabel3 = Label(window, text=W_WindS[c_current],foreground = "blue")
+     NameLabel3.place(x=210, y=180)
+     NameLabel4 = Label(window, text="기온(°C) :",font= LabelFont)
+     NameLabel4.place(x=10, y=240)
+     NameLabel4 = Label(window, text="%0.2f" % (float(W_Tem[c_current][1])-273.15),foreground = "blue")
+     NameLabel4.place(x=210, y=240)
+     NameLabel5 = Label(window, text="대기 압 (hPa):",font = LabelFont)
+     NameLabel5.place(x=10, y=290)
+     NameLabel5 = Label(window, text=W_Pres[c_current],foreground = "blue")
+     NameLabel5.place(x=210, y=290)
+     NameLabel6 = Label(window, text="구름 :",font = LabelFont)
+     NameLabel6.place(x=10, y=340)
+     NameLabel6 = Label(window, text=W_Cloud[c_current],foreground = "blue")
+     NameLabel6.place(x=210, y=340)
+     NameLabel7 = Label(window, text="일출,일몰 :",font = LabelFont)
+     NameLabel7.place(x=10, y=390)
+     NameLabel7 = Label(window, text=W_Sun,foreground = "blue")
+     NameLabel7.place(x=210, y=390)
      print(c_current)
-     print(combo.current())
+#날씨 &시간
 def ButtonState2():
     window.geometry('500x800')
-    erase()
+    erase(30)
     MakeValue()
-
     chosenFont = font.Font(family='굴림체', size=20, weight='normal')
     NameLabel = Label(window, text=nation, font=chosenFont, background="black", foreground="white")  # 국가명
     NameLabel.place(x=10, y=30)
 
     global combo
     str = StringVar()
-    combo = ttk.Combobox(window, width=20, textvariable=str,values=W_Time)
-    combo.place(x=200,y=50)
-    combo.current(0)
-
+    combo = ttk.Combobox(window, width=20, textvariable=str, values=W_Time)
+    combo.place(x=10, y=100)
     buttonTime = Button(window, text="확인", command=clickMe)
-    buttonTime.place(x=370, y=50)
+    buttonTime.place(x=180, y=95)
 
-    NameLabel2 = Label(window, text=W_WindD[combo.current()])
-    NameLabel2.place(x=10, y=230)
-    NameLabel3 = Label(window, text=W_WindS[c_current])
-    NameLabel3.place(x=10, y=260)
-    NameLabel4= Label(window, text=W_Tem[c_current])
-    NameLabel4.place(x=10, y=290)
-    NameLabel5 = Label(window, text=W_Pres[c_current])
-    NameLabel5.place(x=10, y=310)
-    NameLabel6 = Label(window, text=W_Cloud[c_current])
-    NameLabel6.place(x=10, y=340)
-    NameLabel7 = Label(window, text=W_Sun[c_current])
-    NameLabel7.place(x=10, y=370)
 
 
 #항공편
