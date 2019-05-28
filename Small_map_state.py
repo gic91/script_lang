@@ -67,7 +67,7 @@ def erase(y):
     chosenFont = font.Font(family='굴림체', size=1000, weight='normal')
     firstNameLabel = Label(window, text="    ", font=chosenFont)  # 국가명
     firstNameLabel.place(x=0, y=y)
-    Thunbnail()
+    Thunmbnail()
 
 def MakeValue():
     global W_Sun, W_Time, W_WindD, W_WindS, W_Tem, W_Pres, W_Cloud
@@ -168,7 +168,7 @@ def ButtonState2():
 def ButtonState3():
     pass
 #사진 불러오기 함수
-def Thunbnail():
+def Thunmbnail():
     global imageLabel
     imageLabel = Label(window, image=img)
     #####
@@ -190,7 +190,7 @@ def run():
     img = ImageTk.PhotoImage(Image.open(image))
 
 
-    Thunbnail()
+    Thunmbnail()
 
     buttonTime = Button(window, text="국가 백과사전", command=ButtonState1)
     buttonTime.place(x=50, y=0)

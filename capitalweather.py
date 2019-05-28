@@ -14,7 +14,7 @@ capitals = {'bg': 'london', 'de': 'berlin', 'fr': 'paris', 'ua': 'kiev', 'es': '
 def info(nation):
     if nation == '영국':
         nation = 'bg'
-    elif nation ==  "프랑스":
+    elif nation == "프랑스":
         nation = 'fr'
     elif nation == "스페인":
         nation = 'es'
