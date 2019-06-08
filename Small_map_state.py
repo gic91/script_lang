@@ -4,13 +4,14 @@ from tkinter import *
 from tkinter import font
 from tkinter import Tk, ttk, StringVar, messagebox
 import naverapi
-import  smtplib
+import smtplib
 from email.mime.text import  MIMEText
 import capitalweather
 import urllib.request
 from PIL import ImageTk, Image
 import webbrowser
 import openurl
+import worldtime
 
 name = "Main"
 
@@ -23,12 +24,18 @@ def enter():
     global nation
     global description, link, thumbnail
     description, link, thumbnail = naverapi.get_nation_info(nation)
+    worldtime.nation = nation
+    global time
+    time = worldtime.nowtime()
     global nationinfo
     nationinfo = openurl.infotolist(link)
 
     #날씨
     global w_Sun,w_Time, w_WindD, w_WindS, w_Tem, w_Pres, w_Cloud
     w_Sun,w_Time, w_WindD, w_WindS, w_Tem, w_Pres, w_Cloud = capitalweather.info(nation)
+
+    # 시간
+
 # 창 가운데로 정렬
 def center(self):
     w = self.winfo_screenwidth()
@@ -121,6 +128,10 @@ def ButtonState1():
     chosenFont = font.Font(family='굴림체', size=20, weight='normal')
     NameLabel = Label(window, text= nation, font=chosenFont,background="black",foreground="white")  # 국가명
     NameLabel.place(x=10, y=30)
+    global time
+    time = worldtime.nowtime()
+    TimeLabel = Label(window, text=time, font=chosenFont)
+    TimeLabel.place(x=150, y=30)
 
     #요약
     box1 = Frame(window)
@@ -183,6 +194,7 @@ def ButtonState2():
     chosenFont = font.Font(family='굴림체', size=20, weight='normal')
     NameLabel = Label(window, text=nation, font=chosenFont, background="black", foreground="white")  # 국가명
     NameLabel.place(x=10, y=30)
+
     global combo
     str = StringVar()
     combo = ttk.Combobox(window, width=20, textvariable=str, values=W_Time)
@@ -242,6 +254,13 @@ def run():
     ButtonState1()
     window.mainloop()
 
+def updatetime():
+    global time
+    time = worldtime.nowtime()
+    chosenFont = font.Font(family='굴림체', size=20, weight='normal')
+    TimeLabel = Label(window, text=time, font=chosenFont)
+    TimeLabel.place(x=150, y=30)
+    window.update()
 
 def pause():
     pass
@@ -252,6 +271,7 @@ def resume():
 
 
 def exit():
+    #worldtime.t.cancel()
     window.destroy()
 
 
