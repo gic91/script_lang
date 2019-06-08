@@ -4,6 +4,8 @@ from tkinter import *
 from tkinter import font
 from tkinter import Tk, ttk, StringVar, messagebox
 import naverapi
+import  smtplib
+from email.mime.text import  MIMEText
 import capitalweather
 import urllib.request
 from PIL import ImageTk, Image
@@ -87,6 +89,30 @@ def MakeValue():
         W_Pres.append(list(w_Pres[a].values()))
         W_Cloud.append(list(w_Cloud[a].values()))
         W_Sun = list(w_Sun.values())
+
+def sendMail(me, you, msg):
+    smtp = smtplib.SMTP_SSL('smtp.gmail.com', 465)
+    smtp.login(me, 'dltkdwlr2934')
+    msg = MIMEText(msg)
+    msg['Subject'] = '국가 정보'
+    smtp.sendmail(me, you, msg.as_string())
+    smtp.quit()
+def Make_dic_String():
+    global dic_string
+    dic_string =  "국가명 : "+nation
+    for i in range(16):
+         dic_string +="\n" + nationinfo[i][0] + " : " + nationinfo[i][1]
+def Make_wea_String(num):
+    global wae_string
+    wae_string =  "국가명 : "+nation
+    wae_string += "\n" + "시간 :" + str(W_Time[num])
+    wae_string +="\n" + "바람 방향 :" + str(W_WindD[num])
+    wae_string +="\n" + "바람 세기 :" + str(W_WindS[num])
+    wae_string +="\n" + "기온(°C) :" + "%0.2f" % (float(W_Tem[num][1])-273.15)
+    wae_string +="\n" + "대기 압 (hPa):" + str(W_Pres[num])
+    wae_string +="\n" + "구름 :" +str(W_Cloud[num])
+    wae_string +="\n" + "일출,일몰 :"+ str(W_Sun)
+    print(wae_string)
 #국가 백과사전
 def ButtonState1():
     window.geometry('500x800')
@@ -111,11 +137,14 @@ def ButtonState1():
         box_value2 = Frame(window)
         TextBox_nonscroll(box_key2, 260, 180+(b2*80), 13, 1,   nationinfo[c][0])
         TextBox(box_value2, 355, 180 + (b2 *80), 15, 3,"blue", nationinfo[c][1])
-
+    Make_dic_String()
     linkbutton = Button(window, text="네이버 백과사전으로", command=lambda: openwebbrowser(link))
     linkbutton.config(foreground = "blue" )
-    linkbutton.place(x=170, y=130)
-
+    linkbutton.place(x=0, y=130)
+    e1 = Entry(window)
+    e1.place(x=130,y=130)
+    mailbutton = Button(window, text="메일 보내기", command= lambda : sendMail('gic9111@gmail.com',e1.get(), dic_string))
+    mailbutton.place(x=200,y=150)
 def clickMe():
      global c_current
      erase(200)
@@ -154,14 +183,19 @@ def ButtonState2():
     chosenFont = font.Font(family='굴림체', size=20, weight='normal')
     NameLabel = Label(window, text=nation, font=chosenFont, background="black", foreground="white")  # 국가명
     NameLabel.place(x=10, y=30)
-
     global combo
     str = StringVar()
     combo = ttk.Combobox(window, width=20, textvariable=str, values=W_Time)
+    combo.current(0)
     combo.place(x=10, y=100)
     buttonTime = Button(window, text="확인", command=clickMe)
     buttonTime.place(x=180, y=95)
 
+    Make_wea_String(combo.current())
+    e1 = Entry(window)
+    e1.place(x=230, y=100)
+    mailbutton = Button(window, text="메일 보내기", command=lambda: sendMail('gic9111@gmail.com', e1.get(), wae_string))
+    mailbutton.place(x=360, y=96)
 
 
 #항공편
