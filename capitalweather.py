@@ -8,7 +8,8 @@ capitals = {'bg': 'london', 'de': 'berlin', 'fr': 'paris', 'ua': 'kiev', 'es': '
             , 'ru': 'moscow', 'cn': 'beijing', 'in': 'new delhi', 'kr': 'seoul', 'jp': 'tokyo'
             , 'au': 'canberra', 'nz': 'wellington'
             , 'ca': 'ottawa', 'us': 'washington dc.'
-            , 'mx': 'mexico city', 'cu': 'havana', 'co': 'bogota', 'br': 'brasilia', 'ar': 'buenos aires'}
+            , 'mx': 'mexico city', 'cu': 'havana', 'co': 'bogota', 'br': 'brasilia', 'ar': 'buenos aires'
+            ,'it': 'rome','no':'oslo','fi':'helsinki','cz':'prague','ph':'manila','mg':'ulaanbaatar'}
 
 
 def info(nation):
@@ -70,6 +71,18 @@ def info(nation):
         nation = 'ir'
     elif nation == "아프가니스탄":
         nation = 'af'
+    elif nation == "노르웨이":
+        nation = 'no'
+    elif nation == "핀란드":
+        nation = 'fi'
+    elif nation == "체코":
+        nation = 'cz'
+    elif nation == "이탈리아":
+        nation = 'it'
+    elif nation == "필리핀":
+        nation = 'ph'
+    elif nation == "몽골":
+        nation = 'mg'
     capital = urllib.parse.quote(capitals[nation])
     url = "http://api.openweathermap.org/data/2.5/forecast?mode=xml&appid=ee0eb26bb4ce4382c4ba07b8c6f87635&lang=kr&q=" + capital
     request = urllib.request.Request(url)
