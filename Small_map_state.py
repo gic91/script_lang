@@ -12,6 +12,7 @@ from PIL import ImageTk, Image
 import webbrowser
 import openurl
 import worldtime
+import time
 
 name = "Main"
 
@@ -26,8 +27,8 @@ def enter():
     global description, link, thumbnail
     description, link, thumbnail = naverapi.get_nation_info(nation)
     worldtime.nation = nation
-    global time
-    time = worldtime.nowtime()
+    global Time
+    Time = worldtime.nowtime()
     global nationinfo
     nationinfo = openurl.infotolist(link)
 
@@ -254,11 +255,13 @@ def run():
     window.mainloop()
 
 def updatetime():
-    global time
+    global Time
+    chosenFont = font.Font(family='굴림체', size=20, weight='normal')
+
     while(timer_on):
-        time = worldtime.nowtime()
-        chosenFont = font.Font(family='굴림체', size=20, weight='normal')
-        TimeLabel = Label(window, text=time, font=chosenFont)
+        time.sleep(0.1)
+        Time = worldtime.nowtime()
+        TimeLabel = Label(window, text=Time, font=chosenFont)
         TimeLabel.place(x=150, y=30)
         window.update()
 
