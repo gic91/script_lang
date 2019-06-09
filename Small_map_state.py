@@ -19,6 +19,7 @@ nation = ""
 
 chapter = 1
 
+
 def enter():
     ## 백과사전
     global nation
@@ -128,10 +129,7 @@ def ButtonState1():
     chosenFont = font.Font(family='굴림체', size=20, weight='normal')
     NameLabel = Label(window, text= nation, font=chosenFont,background="black",foreground="white")  # 국가명
     NameLabel.place(x=10, y=30)
-    global time
-    time = worldtime.nowtime()
-    TimeLabel = Label(window, text=time, font=chosenFont)
-    TimeLabel.place(x=150, y=30)
+
 
     #요약
     box1 = Frame(window)
@@ -156,6 +154,7 @@ def ButtonState1():
     e1.place(x=130,y=130)
     mailbutton = Button(window, text="메일 보내기", command= lambda : sendMail('gic9111@gmail.com',e1.get(), dic_string))
     mailbutton.place(x=200,y=150)
+    updatetime()
 def clickMe():
      global c_current
      erase(200)
@@ -220,13 +219,13 @@ def Thunmbnail():
     #####
 def run():
     #### 창 만들기
-    global window
+    global window ,timer_on
     window = Toplevel()
     map_label = Label(window)
     map_label.pack()
     center(window)
     window.geometry('500x500')  # width x height + 가로격자+세로격자
-
+    timer_on = True
     global img
     description, link, thumbnail = naverapi.get_nation_info(nation)
     image = "thumbnail.jpg"
@@ -256,11 +255,12 @@ def run():
 
 def updatetime():
     global time
-    time = worldtime.nowtime()
-    chosenFont = font.Font(family='굴림체', size=20, weight='normal')
-    TimeLabel = Label(window, text=time, font=chosenFont)
-    TimeLabel.place(x=150, y=30)
-    window.update()
+    while(timer_on):
+        time = worldtime.nowtime()
+        chosenFont = font.Font(family='굴림체', size=20, weight='normal')
+        TimeLabel = Label(window, text=time, font=chosenFont)
+        TimeLabel.place(x=150, y=30)
+        window.update()
 
 def pause():
     pass
@@ -271,6 +271,9 @@ def resume():
 
 
 def exit():
+    global timer_on
+    if timer_on:
+        timer_on = False
     #worldtime.t.cancel()
     window.destroy()
 
