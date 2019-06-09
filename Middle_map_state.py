@@ -27,7 +27,6 @@ def Back():
     window.destroy()
     game_framework.run(Big_map_state)
 
-
 def center(self):
         w = self.winfo_screenwidth()
         h = self.winfo_screenheight()
@@ -40,7 +39,6 @@ def center(self):
 def Nation_info(nation):
     Small_map_state.nation = nation
     game_framework.run(Small_map_state)
-
 
 def run():
     global window,main_num
@@ -69,6 +67,7 @@ def run():
     img = PhotoImage(file=main_photo)
     map_label = Label(window, image=img)
     map_label.pack()
+
     # 29개국 설정
     if main_num == 1:
         nation1 = Button(window, text="영국", width=5, command=lambda: Nation_info("영국"))
@@ -149,6 +148,7 @@ def run():
         nation5.place(x=520, y=160)
     center(window)
     window.geometry('800x500')  # width x height + 가로격자+세로격자
+
     button1 = Button(window, text="뒤로가기", width=30, command = Back)
     button1.place(x=00, y=0)
 

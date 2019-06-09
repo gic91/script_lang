@@ -265,13 +265,13 @@ def updatetime():
         TimeLabel.place(x=150, y=30)
         window.update()
 
+
 def pause():
     pass
 
 
 def resume():
     pass
-
 
 def exit():
     global timer_on
@@ -283,7 +283,6 @@ def exit():
 
 def pause():
     pass
-
 
 
 

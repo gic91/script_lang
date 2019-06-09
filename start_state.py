@@ -45,6 +45,7 @@ def run():
     chosenFont2 = font.Font(family='the행복열매', size=20, weight='normal')
     button1 = Button(window,text="시작",command = process_next, font = chosenFont)
     button1.place(x=190,y=650)
+
     button2 = Button(window, text="X", command=sys.exit, font=chosenFont2)
     button2.place(x=460, y=0)
     window.mainloop()
