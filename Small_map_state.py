@@ -13,6 +13,7 @@ import webbrowser
 import openurl
 import worldtime
 import time
+import threading
 
 name = "Main"
 
@@ -155,7 +156,7 @@ def ButtonState1():
     e1.place(x=130,y=130)
     mailbutton = Button(window, text="메일 보내기", command= lambda : sendMail('gic9111@gmail.com',e1.get(), dic_string))
     mailbutton.place(x=200,y=150)
-    updatetime()
+    timerupdate()
 def clickMe():
      global c_current
      erase(200)
@@ -220,13 +221,12 @@ def Thunmbnail():
     #####
 def run():
     #### 창 만들기
-    global window ,timer_on
+    global window
     window = Toplevel()
     map_label = Label(window)
     map_label.pack()
     center(window)
     window.geometry('500x500')  # width x height + 가로격자+세로격자
-    timer_on = True
     global img
     description, link, thumbnail = naverapi.get_nation_info(nation)
     image = "thumbnail.jpg"
@@ -254,16 +254,16 @@ def run():
     ButtonState1()
     window.mainloop()
 
-def updatetime():
-    global Time
-    chosenFont = font.Font(family='굴림체', size=20, weight='normal')
 
-    while(timer_on):
-        time.sleep(0.1)
-        Time = worldtime.nowtime()
-        TimeLabel = Label(window, text=Time, font=chosenFont)
-        TimeLabel.place(x=150, y=30)
-        window.update()
+def timerupdate():
+    global t
+    t = threading.Timer(1, timerupdate)
+    t.start()
+    chosenFont = font.Font(family='굴림체', size=20, weight='normal')
+    Time = worldtime.nowtime()
+    TimeLabel = Label(window, text=Time, font=chosenFont)
+    TimeLabel.place(x=150, y=30)
+    window.update()
 
 
 def pause():
@@ -274,10 +274,8 @@ def resume():
     pass
 
 def exit():
-    global timer_on
-    if timer_on:
-        timer_on = False
-    #worldtime.t.cancel()
+    global t
+    t.cancel()
     window.destroy()
 
 
